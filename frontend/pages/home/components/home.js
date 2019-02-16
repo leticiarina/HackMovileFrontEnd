@@ -1,11 +1,11 @@
 import { connect } from "react-redux" 
-import { selectors } from "./store"
+import { selectors } from "../store"
 
-const Home = ({ title }) => 
-  <h1>{title}</h1>
+const Home = ({ balance }) => 
+  <h1>{balance}</h1>
 
 export const mapStateToProps = state => ({
-  title: selectors.getTitle(state),
+  balance: selectors.getBalance(state),
 })
 
 export default connect(

@@ -1,0 +1,9 @@
+version: '3'
+services:
+  frontend:
+    image: node:8.9-alpine
+    command: sh -c 'cd /media && npm install --verbose && npm run dev'
+    ports:
+      - "3000:3000"
+    volumes:
+      - $PWD/../frontend:/media
