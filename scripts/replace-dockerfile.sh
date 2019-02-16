@@ -1,2 +1,2 @@
 rm -rf ./Dockerfile
-mv ./scripts/Dockerfile ./Dockerfile
+cp ./frontend/scripts/Dockerfile ./Dockerfile

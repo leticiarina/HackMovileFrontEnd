@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - ./scripts/replace-dockerfile.sh
+  - ./frontend/scripts/replace-dockerfile.sh
   - docker build -t leticiarina/hackpay-front -f Dockerfile.test .
 
 script:
