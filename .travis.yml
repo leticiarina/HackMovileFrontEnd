@@ -12,7 +12,7 @@ script:
 deploy:
   provider: elasticbeanstalk
   region: "us-east-1"
-  app: "hackpay-front"
+  app: "hackpay"
   env: "Hackpay-front-env"
   bucket_name: "hackpay-front-bucket"
   bucket_path: "hackpay"
