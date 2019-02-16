@@ -1,0 +1,23 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - ./scripts/replace-dockerfile.sh
+  - docker build -t leticiarina/hackpay-front -f Dockerfile.test .
+
+script:
+  - docker run leticiarina/hackpay-front
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-1"
+  app: "hackpay-front"
+  env: "Hackpay-front-env"
+  bucket_name: "hackpay-front-bucket"
+  bucket_path: "hackpay"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_ACCESS_KEY"
