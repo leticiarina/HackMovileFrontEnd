@@ -6,9 +6,9 @@ COPY frontend/package.json .
 COPY frontend/package-lock.json .
 RUN npm install
 
-COPY frontend/* ./
+COPY frontend/ ./
 
 RUN npm run build
 
 EXPOSE 3000
-CMD ["npm", "run", "start"]
+CMD [ "npm", "run", "start" ]
