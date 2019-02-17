@@ -2,7 +2,7 @@ import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 
 import { connect } from "react-redux"
-import { selectors } from "../../store/account"
+import { selectors } from "../store/account"
 
 const operations = [
   "Abertura de conta",

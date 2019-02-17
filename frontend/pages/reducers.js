@@ -1,8 +1,8 @@
 import { combineReducers } from "redux"
-// import home from "./home/store"
+import account from "../store/account"
 import login from "../store/login"
 
 export default combineReducers({
-  // home,
+  account,
   login,
 })
