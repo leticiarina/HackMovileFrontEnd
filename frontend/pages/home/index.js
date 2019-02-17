@@ -3,6 +3,7 @@ import Button from "../../components/Button"
 import Card from "../../components/Card"
 import Col from "react-bootstrap/Col"
 import Footer from "../../components/Footer"
+import Link from "next/link"
 import Row from "react-bootstrap/Row"
 import Section from "../../components/Section"
 
@@ -13,7 +14,7 @@ const Home = () =>
         <Card top="68px" bottom="13px">
           <h4>Meu saldo</h4>
           <h1>R$10,00</h1>
-          <p>Ver meu extrato</p>
+          <p><Link href="/statement">Ver meu extrato</Link></p>
         </Card>
       </Col>
     </Row>
