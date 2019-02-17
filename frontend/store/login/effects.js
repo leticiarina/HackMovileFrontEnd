@@ -43,9 +43,7 @@ export const checkToken = () => async (dispatch, getState) => {
     //   }
     // }
 
-    if (response.data.status.code == 200) {
-      Router.push('/home');
-    }
+    Router.push('/home');
   } catch (error) {
     console.log(error);
   }
