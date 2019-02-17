@@ -1,13 +1,13 @@
-import Button from "../../components/Button"
-import Card from "../../components/Card"
+import Button from "../components/Button"
+import Card from "../components/Card"
 import Col from "react-bootstrap/Col"
-import { GreenContainer } from "../../components/Container"
+import { GreenContainer } from "../components/Container"
 import Form from "react-bootstrap/Form"
-import Input from "../../components/Input"
+import Input from "../components/Input"
 import Row from "react-bootstrap/Row"
 
 import { connect } from "react-redux"
-import { actions, effects, selectors } from "../../store/login"
+import { actions, effects, selectors } from "../store/login"
 
 const ConfirmLogin = ({ 
   token,

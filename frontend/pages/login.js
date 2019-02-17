@@ -1,14 +1,14 @@
-import Button from "../../components/Button"
-import Card from "../../components/Card"
+import Button from "../components/Button"
+import Card from "../components/Card"
 import Col from "react-bootstrap/Col"
-import { GreenContainer } from "../../components/Container"
-
-import Input from "../../components/Input"
+import { GreenContainer } from "../components/Container"
+import Form from "react-bootstrap/Form"
+import Input from "../components/Input"
 import Row from "react-bootstrap/Row"
 import styled from "styled-components"
 
 import { connect } from "react-redux"
-import { actions, effects, selectors } from "../../store/login"
+import { actions, effects, selectors } from "../store/login"
 
 const Link = styled.div`
   color: #ffff;
@@ -32,15 +32,17 @@ const Login = ({
         <Card top="193px">
           <h1>Seja bem-vindo!</h1>
           <h4>Para logar, vamos pedir seu número de telefone:</h4>
-          <Input
-            onChange={(e) => onChangePhone(e.target.value)}
-            placeholder="Digite aqui seu número"
-            type="number"
-            value={phone}
-          />
-        <p>
-          <Button onClick={checkPhone}>Enviar</Button>
-        </p>
+          <Form>
+            <Form.Group>
+              <Input
+                onChange={(e) => onChangePhone(e.target.value)}
+                placeholder="Digite aqui seu número"
+                type="number"
+                value={phone}
+              />
+            </Form.Group>
+            <Button onClick={checkPhone}>Enviar</Button>
+          </Form>
         </Card>
         <Link>
           Não tenho número de celular, e agora?
