@@ -28,7 +28,7 @@ const Home = () =>
               Precisa receber dinheiro de alguma coisa?<br/>
               Fácil e prático, seu dinheiro na sua conta de forma descomplicada.
             </p>
-            <Button>Receber</Button>
+            <Link href="/receive"><Button>Receber</Button></Link>
         </Section>
         </Col>
         <Col lg={6}>

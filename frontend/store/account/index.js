@@ -1,7 +1,10 @@
 import { Map } from "immutable"
+import * as actions from "./actions"
+import * as effects from "./effects"
 import * as selectors from "./selectors"
 
 const scaffold = Map({
+  chargeValue: "",
   statement: [
     {
       date: "16/02/19",
@@ -30,10 +33,12 @@ const scaffold = Map({
 
 const reducer = (state = scaffold, action) => {
   switch(action.type) {
+    case "ON_CHANGE_CHARGE_VALUE":
+      return state.set("chargeValue", action.chargeValue)
     default:
       return state
   }
 }
 
-export { selectors }
+export { actions, effects, selectors }
 export default reducer
