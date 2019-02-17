@@ -4,13 +4,16 @@ import * as effects from "./effects"
 import * as selectors from "./selectors"
 
 const scaffold = Map({
-  balance: null,
+  phone: "",
+  token: "",
 })
 
 const reducer = (state = scaffold, action) => {
   switch(action.type){
-    case "SET_BALANCE":
-      return state.set("balance", action.type)
+    case "ON_CHANGE_PHONE":
+      return state.set("phone", action.phone)
+    case "ON_CHANGE_TOKEN":
+      return state.set("token", action.token)
     default:
       return state
   }

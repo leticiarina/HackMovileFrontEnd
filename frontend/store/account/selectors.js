@@ -1,0 +1,1 @@
+export const getStatement = state => state.account.get("statement")
